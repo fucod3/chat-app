@@ -5,9 +5,13 @@ body {
   color: #fff;
 }
 
-h1 {
-  padding: 10px;
-  font-size: 20px;
+/* sembunyiin elemen */
+.hidden {
+  display: none;
+}
+
+h2, h4 {
+  margin: 10px 0;
   text-align: center;
 }
 
@@ -17,10 +21,6 @@ input, button {
   border: none;
   border-radius: 5px;
   font-size: 14px;
-}
-
-input {
-  flex: 1;
 }
 
 button {
@@ -33,10 +33,35 @@ button:hover {
   background: #4752c4;
 }
 
-#chat-container {
+/* layout utama */
+#chat {
+  display: flex;
+  height: 100vh;
+}
+
+#sidebar {
+  width: 200px;
+  background: #23272a;
+  padding: 10px;
+  overflow-y: auto;
+}
+
+#mebox {
+  text-align: center;
+  margin-bottom: 15px;
+}
+
+#mebox img {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  margin-bottom: 10px;
+}
+
+#main {
+  flex: 1;
   display: flex;
   flex-direction: column;
-  height: 100vh;
 }
 
 #messages {
@@ -51,4 +76,16 @@ button:hover {
   padding: 8px;
   border-radius: 5px;
   background: #40444b;
+}
+
+/* input box */
+#inputbox {
+  display: flex;
+  padding: 10px;
+  background: #2f3136;
+}
+
+#inputbox input {
+  flex: 1;
+  margin-right: 10px;
 }
