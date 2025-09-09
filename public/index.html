@@ -1,0 +1,47 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>chat minimal</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div id="app">
+  <div id="auth">
+    <h2>chat minimal...</h2>
+    <input id="username" placeholder="username..." />
+    <input id="password" placeholder="password..." type="password" />
+    <div class="row">
+      <button id="btn-register">register</button>
+      <button id="btn-login">login</button>
+    </div>
+    <p id="auth-msg"></p>
+  </div>
+
+  <div id="chat" class="hidden">
+    <div id="sidebar">
+      <div id="mebox">
+        <img id="me-avatar" src="" alt="avatar" />
+        <div id="me-name"></div>
+        <input id="avatar-file" type="file" accept="image/*" />
+        <button id="btn-logout">logout</button>
+      </div>
+      <h4>online</h4>
+      <ul id="users"></ul>
+    </div>
+
+    <div id="main">
+      <div id="messages"></div>
+      <div id="inputbox">
+        <input id="msginput" placeholder="ketik pesan..." />
+        <button id="btn-send">kirim</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script src="/socket.io/socket.io.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
